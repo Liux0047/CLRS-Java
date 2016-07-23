@@ -13,4 +13,4 @@ hs_err_pid*
 
 # IDEA settings
 .idea/
-CLRS-Java.iml
+*.iml
