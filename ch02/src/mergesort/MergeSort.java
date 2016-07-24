@@ -8,9 +8,10 @@ public class MergeSort {
     public static void mergeSort(int[] input, int begin, int end) {
         if (end > begin) {
             int mid = (end + begin) / 2 + 1;
-            mergeSort(input, begin, mid -1);
+            mergeSort(input, begin, mid - 1);
             mergeSort(input, mid, end);
             merge(input, begin, mid, end);
+//            mergeWithoutSentinel(input, begin, mid, end);
         }
     }
 
@@ -34,6 +35,31 @@ public class MergeSort {
                 input[k] = right[j++];
             }
         }
+    }
 
+    public static void mergeWithoutSentinel(int[] input, int begin, int mid, int end) {
+        int leftSize = mid - begin;
+        int rightSize = end - mid + 1;
+
+        int[] left = new int[leftSize];
+        System.arraycopy(input, begin, left, 0, leftSize);
+
+        int[] right = new int[rightSize];
+        System.arraycopy(input, mid, right, 0, rightSize);
+
+        int i = 0, j = 0;
+        for (int k = begin; k <= end; k++) {
+            if (i >= leftSize) {
+                input[k] = right[j++];
+            } else if (j >= rightSize) {
+                input[k] = left[i++];
+            } else {
+                if (left[i] < right[j]) {
+                    input[k] = left[i++];
+                } else {
+                    input[k] = right[j++];
+                }
+            }
+        }
     }
 }
