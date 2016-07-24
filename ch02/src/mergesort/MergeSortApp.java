@@ -1,21 +1,23 @@
-package insertionsort;
+package mergesort;
 
 import static util.SortingUtil.isCorrect;
 
 /**
  * Created by Allen on 7/24/2016.
  */
-public class InsertionSortApp {
+public class MergeSortApp {
 
     public static void main(String[] args) {
-        int[] a = {5, 2, 4, 6, 1, 3};
-        InsertionSort.sort(a);
-        if (isCorrect(a)) {
-            for (int i : a) {
+        int[] input = {5, 2, 4, 7, 1, 3, 2, 6};
+        MergeSort.mergeSort(input, 0, input.length - 1);
+
+        if (isCorrect(input)) {
+            for (int i : input) {
                 System.out.print(i + " ");
             }
         } else {
             System.out.println("Algo incorrect");
         }
     }
+
 }
