@@ -11,5 +11,3 @@ Solutions to remaining **non-trivial** exercises are to be provided in this repo
 
 ## Code structure
 `MyAlgorithm.java` contains the actual implementation of the algorithm
-`MyAlgorithmApp,java` contains the testing and complexity analysis of the algorithm
-
