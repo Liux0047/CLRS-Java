@@ -56,15 +56,39 @@ First sort this array in _O(nlgn)_ time. And then this becomes a two-sum problem
 **b.** 
 
     Loop invariant:
-    > At the start of each iteration of the **for** loop of lines 1-4, the sub array A[1..i-1] consists the smallest i-1 elements of the original array, in sorted order
+    At the start of each iteration of the **for** loop of lines 1-4, 
+    the sub array A[1..i-1] consists the smallest i-1 elements of the original array, in sorted order
     
     Proof:
-    Initialization: trivally sorted
-    Maintenance: The loop in lines 2-3 will swap the smallest element of A[i..length] to position i. As dicatated by loop invariant, the new A[i] is larger than any element in A[1..i-1]; 
-    at the same time it is smaller than all A[i+1..length]. Therefore loop invariant holds for the next iteration
-    Termination: A[1..length-1] contains the smallest (length-1) elements of the orignial array in sorted order; the last one is the largest. Thus whole array is sorted
+    Initialization: no element, trivally satisfied
+    
+    Maintenance: 
+    The loop in lines 2-3 will swap the smallest element of A[i..length] to position i. 
+    As dicatated by loop invariant, the new A[i] is larger than any element in A[1..i-1]; 
+    at the same time it is smaller than all A[i+1..length]. 
+    Therefore loop invariant holds for the next iteration
+    
+    Termination: 
+    A[1..length-1] contains the smallest (length-1) elements of the orignial array in sorted order; 
+    the last one is the largest. Thus whole array is sorted
     
 **c.**?
 
 **d.** _&Theta;(n^2)_ Same in worst case
+    
+## Problem 2-3
+**a.** _&Theta;(n)_
+
+**b.** _&Theta;(n^2)_
+
+**c.** 
+
+    x*y => exponent of x in summation becomes k+1
+    substitute m = k+1, summation is from m=1 to n-i, m is the exponent of x
+    ai + x*y => treat as ai * (x^0) + x*y
+    summation is from m to n-i
+    increment i, back to orignial form
+    
+    At termination, i=-1, and this is the sum of the polynomial
+    
     
