@@ -40,3 +40,12 @@ The algorithm as a whole still has a running time of _O(n^2)_ on average because
 ## Ex 2.3-7
 First sort this array in _O(nlgn)_ time. And then this becomes a two-sum problem which can be solved in linear time.
 [Refer to this answer on Stackoverflow](http://stackoverflow.com/a/11928155/2408445)
+
+## Problem 2-1
+**a.** Each sublist needs k^2 amount of time, in total n/k lists: `k^2 * (n/k) = nk`
+
+**b.** Essentially it's merge sort with only _n/k_ leaves, instead of _n_ leaves.
+
+**c.** ?
+
+**d.** Choose k so that the running time of merge sort and insertion sort of k elements are equal
