@@ -49,3 +49,22 @@ First sort this array in _O(nlgn)_ time. And then this becomes a two-sum problem
 **c.** ?
 
 **d.** Choose k so that the running time of merge sort and insertion sort of k elements are equal
+
+## Problem 2-2
+**a.** The output contains exactly the same set of elements as the input
+
+**b.** 
+
+    Loop invariant:
+    > At the start of each iteration of the **for** loop of lines 1-4, the sub array A[1..i-1] consists the smallest i-1 elements of the original array, in sorted order
+    
+    Proof:
+    Initialization: trivally sorted
+    Maintenance: The loop in lines 2-3 will swap the smallest element of A[i..length] to position i. As dicatated by loop invariant, the new A[i] is larger than any element in A[1..i-1]; 
+    at the same time it is smaller than all A[i+1..length]. Therefore loop invariant holds for the next iteration
+    Termination: A[1..length-1] contains the smallest (length-1) elements of the orignial array in sorted order; the last one is the largest. Thus whole array is sorted
+    
+**c.**?
+
+**d.** _&Theta;(n^2)_ Same in worst case
+    
