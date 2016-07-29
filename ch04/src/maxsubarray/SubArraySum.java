@@ -5,7 +5,7 @@ package maxsubarray;
  */
 public class SubArraySum {
 
-    private int low, high ,sum;
+    private int low, high, sum;
 
     public SubArraySum(int low, int high, int sum) {
         this.low = low;
@@ -23,5 +23,17 @@ public class SubArraySum {
 
     public int getSum() {
         return sum;
+    }
+
+    public void setLow(int low) {
+        this.low = low;
+    }
+
+    public void setHigh(int high) {
+        this.high = high;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
     }
 }
