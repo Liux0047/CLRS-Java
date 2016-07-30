@@ -2,12 +2,10 @@
 
 ## Ex 3.1-1
 ```
-need to prove c1[f(n) + g(n)] <= max <= c2[f(n) + g(n)]
-              c1*f(n) + c1*g(n) <= max <= c2*f(n) + c2*g(n)
-since the notation of f(n) and g(n) are arbitrary, let f(n) be the larger one
-divide the inequality with f(n), let g(n)/f(n) = k
-              c1 + c1*k <= 1 <= c2 + c2*k, where 0<k<1
-              c1=1-c1*k, c2=1 can easily satisfy the inequality
+max(f(n), g(n)) <= f(n) + g(n)
+2 * max(f(n), g(n)) >= f(n) + g(n)
+1/2 * f(n) + g(n) <= max <= f(n) + g(n)
+Thus choosing C1 = 1/2, C2 = 1
 Q.E.D.           
 ```
 
