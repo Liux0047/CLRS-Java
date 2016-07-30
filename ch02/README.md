@@ -97,3 +97,5 @@ First sort this array in _O(nlgn)_ time. And then this becomes a two-sum problem
 **d.** is that _counted_ variable needed? since whenever _R[j]_ is exposed, it will also be added to _A_ and _j_ is incremented to the next element. 
 A closer look at the code reveals that _counted_ can never be true at the end of the enclosing loop.
 
+Implemented in `CountInversions`
+
